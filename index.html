@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>BUILDING PARAGRAPHS USING JOIN FUNCTION</title>
+</head>
+<body>
+    <span>
+        <center>
+            <h1 id="heaing">Make paragraphs from input boxes using join function</h1>
+        <div id="first">
+    <span>1.</span>
+    <input type="text" placeholder="" id="Text_1">
+    <span>1.</span>
+    <input type="text" placeholder="" id="Text_7">
+    <br>
+    <br>
+    <span>2.</span>
+    <input type="text" placeholder="" id="Text_2">
+    <span>2.</span>
+    <input type="text" placeholder="" id="Text_8">
+    <br>
+    <br>
+    <span>3.</span>
+    <input type="text" placeholder="" id="Text_3">
+    <span>3.</span>
+    <input type="text" placeholder="" id="Text_9">
+    <br>
+    <br>
+    <span>4.</span>
+    <input type="text" placeholder="" id="Text_4">
+    <span>4.</span>
+    <input type="text" placeholder="" id="Text_10">
+    <br>
+    <br>            <span>5.</span>
+    <input type="text" placeholder="" id="Text_5">
+    <span>5.</span>
+    <input type="text" placeholder="" id="Text_11">
+    <br>
+    <br>
+    <span>6.</span>
+    <input type="text" placeholder="" id="Text_6">
+    <span>6.</span>
+    <input type="text" placeholder="" id="Text_12">
+    <br>
+    <br>
+    <button id="Para_1_get" class="btn-warning" onclick="Get_1()">Get paragraph 1</button>
+    <button id="Para_2_get" class="btn-info" onclick="Get_2()">Get paragraph 2</button>
+        </div>
+</center>
+</span>
+<br>
+<br>
+<br>
+<h3 id="Para_1"></h3>
+<h3 id="Para_2"></h3>
+</body>
+<style>
+    #heaing{
+        font-style:inherit;
+    }
+    #second{
+        display: none;
+    }
+    #Text_1{
+        margin-top: 100px;
+        margin-right:400px ;
+    }
+    #Text_2{
+        margin-right:400px ;
+    }
+    #Text_3{
+        margin-right:400px ;
+    }
+    #Text_4{
+        margin-right:400px ;
+    }
+    #Text_5{
+        margin-right:400px ;
+    }
+    #Text_6{
+        margin-right:400px ;
+    }
+    #Para_1_get{
+        margin-right: 460px;
+        border-color:currentColor;
+    }
+    #Para_2_get{
+        margin-left: 20px;
+        border-color:currentColor;
+    }
+</style>
+<script>
+var para1=[];
+function Get_1(){
+    for (k =1;k<=6;k++) {
+        var all1=document.getElementById("Text_"+k).value;
+        para1.push(all1);
+    }
+    console.log(para1);
+    var comma=para1.join(". ");
+    console.log(para1);
+    document.getElementById("Para_1").innerHTML=comma;
+    document.getElementById("Para_1").style.fontFamily="monospace";
+}
+var para2=[];
+function Get_2(){
+    for (r =7;r<=12;r++) {
+        var all2=document.getElementById("Text_"+r).value;
+        para2.push(all2);
+    }
+    console.log(para2);
+    var comma2=para2.join(". ");
+    console.log(para2);
+    document.getElementById("Para_2").innerHTML=comma2;
+    document.getElementById("Para_2").style.fontFamily="monospace"
+}
+</script>
+</html>
